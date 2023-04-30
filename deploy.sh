@@ -1,6 +1,6 @@
-docker build -t tobiasaditya/multi-client:latest -t tobiasaditya/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t tobiasaditya/multi-server:latest -t tobiasaditya/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t tobiasaditya/react-worker:latest -t tobiasaditya/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t tobiasaditya/multi-client:latest -t tobiasaditya/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t tobiasaditya/multi-server:latest -t tobiasaditya/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t tobiasaditya/multi-worker:latest -t tobiasaditya/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push tobiasaditya/multi-client:latest
 docker push tobiasaditya/multi-server:latest
